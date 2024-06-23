@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ojuju:wght@200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Ojuju", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #8263dd6e;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px blueviolet;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4e5fb18e;
+  border-radius: 10px
+}
+
+i {
+  cursor: pointer;
+}
+
+i:hover {
+  color: rgb(8, 185, 126);
+  font-size: 30px;
+}
+
+.R {
+  animation: R 1s infinite;
+}
+
+@keyframes R {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.S {
+  animation: S 1s infinite;
+}
+
+@keyframes S {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.P {
+  animation: P 1s infinite;
+}
+
+@keyframes P {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Input */
+input,
+textarea {
+  height: 40px;
+  border: 1px solid rgba(79, 116, 167, 0.806);
+  width: 100%;
+  padding-left: 20px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid rgb(60, 51, 225);
+}
+
+textarea {
+  height: 100px;
+  padding-top: 10px;
+}
