@@ -1,0 +1,2 @@
+## Explore my Dynamic_Portfolio
+I developed a dynamic portfolio website using the MERN stack (MongoDB, Express.js, React.js, Node.js). This project showcases my skills and projects in a visually appealing and interactive manner. The backend supports content management, allowing easy updates and additions. The frontend features a responsive and modern design, providing a seamless browsing experience for visitors.
