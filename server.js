@@ -14,6 +14,10 @@ const port = process.env.Port || 5000;
 // app.get('/', (req, res) => {
 //   res.send('Hello World!')
 // })
+app.use(express.static("./client/build"))
+app.get("/",(req,res)=>{
+  res.sendFile("./client/build/index.html")
+})
 
 
 
