@@ -1,16 +1,17 @@
 import React from 'react'
 import SectionTitle from '../../components/SectionTitle';
 import { useSelector } from 'react-redux';
+import { courses } from '../../resource/courses';
 
 function Courses() {
     const [selectedItemIndex, setselectedItemIndex] = React.useState(0);
-    const {portfolioData} = useSelector((state)  => state.root);
-    const {course} = portfolioData;
+    const { portfolioData } = useSelector((state) => state.root);
+    const { course } = portfolioData;
     return (
         <div>
             <SectionTitle title="COURSES" />
 
-            <div className="flex   py-10 gap-20 sm:flex-col">
+            <div className="flex   py-10 gap-16 justify-around  sm:flex-col">
 
                 <div className="flex flex-col border-l-2 border-blue-500 gap-7 w-1/3 sm:flex-row sm:overflow-x-scroll sm:w-full ">
                     {/* period */}
@@ -39,16 +40,20 @@ function Courses() {
 
                 <div className="flex flex-col gap-6">
                     {/* content */}
-                    <h1 className='text-secondry text-5xl font-semibold'>{course[selectedItemIndex].title}</h1>
-                    <p className='text-green-800 font-bold'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident quasi dignissimos, ipsam fugit ratione reprehenderit dolores tenetur voluptate rerum quia?</p>
+                    <h1 className='text-orange-400 text-5xl font-semibold'>{course[selectedItemIndex].title}</h1>
+                    <p className='text-green-800 font-bold'> {course[selectedItemIndex].description}</p>
+                    <a href={course[selectedItemIndex].link} className=' bg-purple-300 rounded-full font-semibold text-center text-red-500 shadow-3xl p-2'> visit {course[selectedItemIndex].title}</a>
 
                 </div>
 
-                <div className="flex justify-center items-center gap-10  sm:flex-col">
+                <div className="flex justify-center items-start w-80     sm:flex-col">
                     <img src={course[selectedItemIndex].image} alt="roshan" className='w-auto h-auto ' />
 
 
                 </div>
+               
+
+
 
             </div>
 
