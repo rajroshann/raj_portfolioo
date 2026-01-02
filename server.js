@@ -1,26 +1,23 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
-const dbConfig = require("./config/dbConfig");
+require("./config/dbConfig");   // this ensures DB connects
 
 const portfolioRoute = require("./routes/portfolioRoutes");
 
 app.use(express.json());
 
+// API routes
 app.use("/api/portfolio", portfolioRoute);
 
-const port = process.env.Port || 5000;
+// Serve frontend in production
+app.use(express.static("./client/build"));
+app.get("*", (req, res) => {
+  res.sendFile(__dirname + "/client/build/index.html");
+});
 
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// })
-app.use(express.static("./client/build"))
-app.get("/",(req,res)=>{
-  res.sendFile("./client/build/index.html")
-})
-
-
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
-  console.log(`server listening on The port ${port}`);
+  console.log(`🚀 Server listening on port ${port}`);
 });

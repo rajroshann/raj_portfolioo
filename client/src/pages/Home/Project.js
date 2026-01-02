@@ -9,7 +9,7 @@ function Project() {
   return (
     <div>
       <SectionTitle title="PROJECT" />
-      <div className="flex   py-10 gap-20 sm:flex-col">
+      <div className="flex  justify-evenly py-10 gap- sm:flex-col">
         <div className="flex flex-col border-l-2 border-blue-500 gap-7 w-1/3 sm:flex-row sm:overflow-x-scroll sm:w-full ">
           {/* period */}
 
@@ -35,11 +35,11 @@ function Project() {
           ))}
         </div>
 
-        <div className="flex justify-center items-center gap-10  sm:flex-col">
+        <div className="flex justify-center items-center  sm:flex-col">
           <img
             src={project[selectedItemIndex].image}
             alt="roshan"
-            className="w-auto h-auto "
+            className="w-40 h-40 "
           />
         </div>
 
